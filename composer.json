@@ -1,5 +1,5 @@
 {
-    "name": "web-250/mvc",
+    "name": "web250/mvc",
     "description": "Introduction to MVC using composer",
     "type": "project",
     "license": "MIT",
@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Robert Uhren",
-            "email": "Robert.Uhren@gmail.com"
+            "email": "robert.uhren@gmail.com"
         }
     ],
     "minimum-stability": "stable",
