@@ -4,6 +4,9 @@
 // The Model contains all the database logic for salamanders.
 // It knows HOW to get the data, but not how to display it.
 require_once __DIR__ . '/../Database.php';
+
+use Web250\Mvc\Database;
+
 class Salamander
 {
   /**
