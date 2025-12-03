@@ -12,23 +12,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Salamanders</title>
+    <meta charset="UTF-8">
+    <title>Salamanders - WEB-250 MVC</title>
 </head>
 
 <body>
-  <h1>Salamanders</h1>
-  <?php foreach ($salamanders as $s): ?>
-    <h2><?= htmlspecialchars($s['name']) ?></h2>
-    <p>
-      <strong>Habitat:</strong>
-      <?= nl2br(htmlspecialchars($s['habitat'])) ?>
-    </p>
-    <p>
-      <?= nl2br(htmlspecialchars($s['description'])) ?>
-    </p>
-    <hr>
-  <?php endforeach; ?>
+    <h1>Salamanders</h1>
+
+    <a href=".">Back to home</a>
+    <?php foreach ($salamanders as $s): ?>
+        <h2><?= htmlspecialchars($s['name']) ?></h2>
+
+        <p>
+            <strong>Habitat:</strong>
+            <?= nl2br(htmlspecialchars($s['habitat'])) ?>
+        </p>
+
+        <p>
+            <?= nl2br(htmlspecialchars($s['description'])) ?>
+        </p>
+
+        <hr>
+    <?php endforeach; ?>
+
 </body>
 
 </html>

@@ -1,19 +1,34 @@
 <?php
-
 declare(strict_types=1);
-
 namespace Web250\Mvc\Controllers;
-
-use Web250\Mvc\Models\Greeting;
-
 class HomeController
 {
-  public function index(): string
-  {
-    $model = new Greeting();
-    $message = $model->hello();
-    ob_start();
-    include __DIR__ . '/../Views/home.php';
-    return (string) ob_get_clean();
-  }
+/**
+* Default landing page ("/" or "/home").
+*/
+public function index(): string
+{
+// Start output buffering so we can return the rendered HTML as a string.
+ob_start();
+include __DIR__ . '/../Views/home.php';
+return ob_get_clean();
+}
+/**
+* About page ("/about") — optional, but already used in your lesson.
+*/
+public function about(): string
+{
+ob_start();
+include __DIR__ . '/../Views/about.php';
+return ob_get_clean();
+}
+/**
+* Contact page ("/contact")
+*/
+public function contact(): string
+{
+ob_start();
+include __DIR__ . '/../Views/contact.php';
+return ob_get_clean();
+}
 }

@@ -1,4 +1,7 @@
 <?php
+
+namespace Web250\Mvc;
+
 // src/Router.php
 //
 // The Router's job is to:
