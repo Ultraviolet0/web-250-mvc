@@ -20,11 +20,29 @@ class Salamander
     $pdo = Database::getConnection();
     // SQL query to select all salamanders, ordered by name
     $sql = "SELECT id, name, habitat, description
-FROM salamanders
-ORDER BY name ASC";
+    FROM salamanders
+    ORDER BY name ASC";
     // Run the query. query() returns a PDOStatement.
     $stmt = $pdo->query($sql);
     // Fetch all rows as an array of associative arrays
-    return $stmt->fetchAll();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+  }
+
+  /**
+   * Get a salamander from the database by ID
+   */
+  public static function find(int $id): ?array
+  {
+    $pdo = Database::getConnection();
+
+    $sql = $pdo->prepare("SELECT * 
+    FROM salamanders 
+    WHERE id = :id");
+
+    $sql->execute([':id' => $id]);
+
+    $row = $sql->fetch(\PDO::FETCH_ASSOC);
+    
+    return $row === false ? null : $row;
   }
 }

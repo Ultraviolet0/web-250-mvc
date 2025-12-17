@@ -9,7 +9,7 @@
 
 <body>
   <h1>Stub for contact page</h1>
-  <a href=".">Back to home</a>
+  <a href="<?= APP_BASE ?>/">Back to home</a>
 </body>
 
 </html>

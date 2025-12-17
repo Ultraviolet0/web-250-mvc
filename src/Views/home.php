@@ -21,9 +21,9 @@
 
   <p>
   <ul>
-    <li><a href="salamanders">Salamanders page</a></li>
-    <li><a href="about">About page</a></li>
-    <li><a href="contact">Contact page</a></li>
+    <li><a href="<?= APP_BASE ?>/salamanders">Salamanders page</a></li>
+    <li><a href="<?= APP_BASE ?>/about">About page</a></li>
+    <li><a href="<?= APP_BASE ?>/contact">Contact page</a></li>
   </ul>
   </p>
 </body>
